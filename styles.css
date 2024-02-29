@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --cor-branca: #fff;
+    --cor-preto: #000000;
+    --cor-vermelho: #ff0000;
+    
+    --cor-azul:#00285C;
+}
+
+body{
+    background-color: var(--cor-branca);
+    color: var(--cor-preto);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+}
+
+.cabecalho{
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000000;    
+}
+
+.cabecalho__nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cabecalho__lista{
+    display: flex;
+    gap: 3em;
+}
+
+li{
+    list-style: none;
+}
+
+.cabecalho__item{
+    color: var(--cor-branca);
+    text-decoration: none;
+}
+
+.cabecalho__imagem{
+    height: 100px;
+    width: 110px;
+    padding: 0 3em ;
+}
+
+.cabecalho__caixa{
+    display: none;
+}
+
+
+.cabecalho__perfil{
+    height: 70px;
+    padding: 0 2.5em 0 1em;
+    border-left: 2px solid var(--cor-branca);
+}
+
+
+
+.banners{
+    height: 99vh;
+}
+.banners-1{
+    background-image: url("img/UNip-estrutura.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
+.cabecalho__item:hover{
+    color: var(--cor-vermelho);
+    
+    
+    /* animation: animacao 400ms ease ;
+    animation-fill-mode: forwards; */
+}
+
+.container{
+    height: 100vh;
+}
+
+@media (min-width: 819px){
+    .cabecalho__caixa{
+        display: block;
+    }
+    
+}
+@media (min-width: 1420px){
+    .cabecalho__caixa{
+        display: block;
+    }
+    
+    .cabecalho__item:hover{
+        
+        animation: animacao 400ms ease ;
+        animation-fill-mode: forwards;
+    }
+
+    .cabecalho__perfil:hover{
+        animation: perfil 400ms ease;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes animacao {
+
+    0%{
+        color: var(--cor-branca);
+    }
+
+
+    100%{
+        color: var(--cor-vermelho);
+        border-bottom: 2px solid var(--cor-vermelho);
+        padding: 2.4em 2em;
+    }
+
+}
+
+@keyframes perfil {
+    0%{
+        height: 70px;
+    }
+
+    100%{
+        height: 80px;
+    }
+}
